@@ -8,7 +8,10 @@ pub struct LimitTracker<'a, T: Messenger> {
     max: usize,
 }
 
-impl<'a, T> LimitTracker<'a, T> where T: Messenger,{
+impl<'a, T> LimitTracker<'a, T>
+where
+    T: Messenger,
+{
     pub fn new(messenger: &T, max: usize) -> LimitTracker<T> {
         LimitTracker {
             messenger,
@@ -41,7 +44,9 @@ struct MockMessenger {
 
 impl MockMessenger {
     fn new() -> MockMessenger {
-        MockMessenger { sent_messages: RefCell::new(vec![])}
+        MockMessenger {
+            sent_messages: RefCell::new(vec![]),
+        }
     }
 }
 
