@@ -83,7 +83,7 @@ pub mod adder {
 }
 
 pub fn greeting(name: &str) -> String {
-    String::from("hello")
+    String::from(name)
 }
 
 pub mod guess {

@@ -23,7 +23,6 @@ fn test_print() {
 
     println!("This struct `{:?}` won't print...", DebugPrintable(3));
 }
-
 struct UnPrintable(i32);
 
 #[derive(Debug)]
